@@ -1,0 +1,66 @@
+.photoList {
+    border-radius: 5px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.photo-uploader-center {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.photo-selector-button {
+    display: inline !important;
+    width: 100%;
+}
+
+.photo-selector-button-label{
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.green{
+    background-color: #2b702b;
+}
+
+.red{
+    background-color: #e14040;
+    margin-bottom: 10px;
+}
+
+.orange{
+    background-color: #e1b155;
+}
+
+
+.green:hover{
+    background-color: rgba(43, 112, 43, 0.8);
+}
+
+.red:hover{
+    background-color: rgba(225, 64, 64, 0.8);
+}
+
+.orange:hover{
+    background-color: rgba(225, 177, 85, 0.8);
+}
+
+.photo-displayer h1{
+    margin-bottom: 30px;
+}
+
+.photo-uploader-remove-button{
+    position: absolute;
+    color: #a33c3c;
+    cursor: pointer;
+    width: 25%;
+    height: 25%;
+    background: transparent;
+    transform: translate(315%, -5%)
+}

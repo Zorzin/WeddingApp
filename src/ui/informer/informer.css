@@ -1,0 +1,28 @@
+.informer-center{
+    text-align: center;
+    display: inline-flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.informer-center-button{
+    padding: 5px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    display: inline;
+    background-color: #e47010;
+}
+
+
+.informer-center-button:hover{
+    background-color: rgba(228, 112, 16, 0.8);
+}
+
+.informer-center-button-right{
+    margin-left: 5px;
+}
+
+.informer-center-button-left{
+    margin-right: 5px;
+}

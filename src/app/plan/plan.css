@@ -1,0 +1,125 @@
+.plan-day-div {
+    margin: 20px;
+}
+
+.planBody {
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flow;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-container {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 20px;
+}
+
+.timeline-container h1 {
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #000;
+    transform: translateX(-50%);
+}
+
+.timeline-event {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.time, .description {
+    flex: 1;
+}
+
+.icon-left{
+    margin-left: 20px;
+}
+
+.time {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.description {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.timeline-event:nth-child(even) .time {
+    order: 3;
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 0;
+}
+
+.timeline-event:nth-child(even) .description {
+    order: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.timeline-event:nth-child(even) .icon {
+    margin-left: 20px;
+}
+
+.timeline-event:nth-child(odd) .time {
+    order: 1;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.timeline-event:nth-child(odd) .description {
+    order: 3;
+    text-align: left;
+    padding-left: 20px;
+}
+
+
+.timeline-event:nth-child(odd) .icon {
+    order: 3;
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 0;
+}
+
+.timeline-day{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.timeline-header{
+    font-size: 50px;
+    margin-top: 30px;
+}
