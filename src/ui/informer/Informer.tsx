@@ -20,7 +20,7 @@ export default function Informer() {
     }
     
     return (
-        <div className="w-full informer-center">
+        <div className="w-full informer-center mb-12">
             <Button color="info"
                     onClick={handleMenuButton}
                     className="informer-center-button informer-center-button-left">

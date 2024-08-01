@@ -18,12 +18,12 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .main-logo{
-  width: 80%;
-  margin-top: 10px;
+  width: 100%;
   margin-bottom: 20px;
 }
 .main-logo img{
   border-radius: 50%;
+  padding: 8%;
 }
 
 .center-div{
@@ -31,15 +31,14 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 body {
-  background-color: #fff7eb;
-}
-
-.main-text{
-  margin-top: 20px;
+  background-image: url("../../public/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .main-text h1{
-    font-size: 30px;
+  font-size: 3vh;
 }
 
 .main-description{
@@ -47,5 +46,31 @@ body {
 }
 
 .main-description h1{
-  font-size: 38px;
+  font-size: 2.5vh;
+  margin-bottom: 30px;
+}
+
+.main-description-plan{
+  margin-top: 20px;
+}
+
+.main-description-plan h1{
+  font-size: 2.5vh;
+  margin-bottom: 0;
+}
+
+.max-w-90p{
+  max-width: 90%;
+}
+
+.main-page{
+  margin: 50px 20px 20px;
+  padding: 10px;
+  border-radius: 36px;
+  border: 2px solid rgb(244, 234, 224);
+}
+
+.main-content{
+  background-color: rgb(244, 234, 224);
+  border-radius: 24px;
 }
