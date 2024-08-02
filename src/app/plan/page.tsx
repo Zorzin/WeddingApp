@@ -85,7 +85,7 @@ export default function Plan() {
                                 <div className="description">Śniadanie</div>
                             </div>
                             <div className="timeline-event">
-                                <div className="time">14:00</div>
+                                <div className="time">11:00</div>
                                 <div className="icon"><Image src="/icons/away.png" alt="Cocktail Hour" width={10}
                                                              height={10} unoptimized/></div>
                                 <div className="description">Wymeldowanie</div>
