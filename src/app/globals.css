@@ -34,7 +34,10 @@ body {
   background-image: url("../../public/images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-attachment: initial;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 .main-text h1{

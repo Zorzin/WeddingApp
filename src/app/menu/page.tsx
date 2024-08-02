@@ -6,7 +6,7 @@ const amiri = Poiret_One({ subsets: ["latin"], weight: ["400"] });
 export default function Menu() {
 
     return (
-        <div className="w-full items-center flex flex-col">
+        <div className="w-full items-center flex flex-col min-h-screen">
             <div className="menu-body">
                 <div className="menu-content">
                     <div className="menu-container">

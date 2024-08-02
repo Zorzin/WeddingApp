@@ -46,8 +46,10 @@ export default function Uploader() {
                 method: 'POST',
                 body: data
             });
+            console.log(response);
 
             if (response.ok) {
+                console.log("response" + response);
                 setSelectedPhotos([]);
                 alert('Zdjęcia i filmy zostały wysłane! Dzięki!');
             }
