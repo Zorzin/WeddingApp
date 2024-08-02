@@ -1,12 +1,25 @@
+"use client"
+
 import './menu.css';
-import {Amiri, Cardo, Petit_Formal_Script, Poiret_One} from "next/font/google";
+import { Poiret_One } from "next/font/google";
+import Image from "next/image";
+import {router} from "next/client";
+import {useRouter} from "next/navigation";
 
 const amiri = Poiret_One({ subsets: ["latin"], weight: ["400"] });
 
 export default function Menu() {
+    const router = useRouter();
+
+    function GoBack() {
+        router.push('/');
+    }
 
     return (
-        <div className="w-full items-center flex flex-col min-h-screen">
+        <div className="w-full items-center flex flex-col min-h-screen mb-10">
+            <div className="text-left w-full ml-12 mt-6">
+                <div><Image src={"/undo.png"} alt="arrow" height={30} width={30} unoptimized onClick={GoBack}/> </div>
+            </div>
             <div className="menu-body">
                 <div className="menu-content">
                     <div className="menu-container">

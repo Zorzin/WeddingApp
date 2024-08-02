@@ -1,10 +1,22 @@
+"use client"
+
 import "./newplan.css";
 import Image from "next/image";
+import {useRouter} from "next/navigation";
 
 
 export default function Plan() {
+    const router = useRouter();
+
+    function GoBack() {
+        router.push('/');
+    }
+
     return (
         <div className="w-full items-center flex flex-col">
+            <div className="text-left w-full ml-12 mt-6">
+                <div><Image src={"/undo.png"} alt="arrow" height={30} width={30} unoptimized onClick={GoBack}/></div>
+            </div>
             <div className="planBody">
                 <div className="planBody-content">
                     <p className="timeline-header">Rozkład jazdy</p>
@@ -183,7 +195,7 @@ export default function Plan() {
                         <div className="event-reverse">
                             <div className="left info">
                                 <div className="description">
-                                <div className="time">18:30</div>
+                                    <div className="time">18:30</div>
                                     <span className="text">Kolacja</span>
                                 </div>
                                 <div className="icon">

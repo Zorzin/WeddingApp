@@ -8,14 +8,10 @@ export default function Informer() {
     const router = useRouter();
     
     const handleMenuButton = async () => {
-        console.log("menu");
-
         router.push('/menu', { scroll: true });
     }
 
     const handlePlanButton = async () => {
-        console.log("plan");
-
         router.push('/plan', { scroll: true });
     }
     

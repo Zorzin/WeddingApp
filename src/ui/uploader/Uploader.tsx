@@ -49,9 +49,11 @@ export default function Uploader() {
             console.log(response);
 
             if (response.ok) {
-                console.log("response" + response);
+                console.log("przez setselectedphotos");
                 setSelectedPhotos([]);
+                console.log("przed alertem")
                 alert('Zdjęcia i filmy zostały wysłane! Dzięki!');
+                console.log("po alercie");
             }
         } catch (error) {
             alert('Błąd podczas wysyłania zdjęć i filmów, spróbuj ponownie (ale to nie pomoże, więc odśwież stronę i powinno działać).');
