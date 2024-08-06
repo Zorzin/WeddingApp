@@ -40,6 +40,11 @@ body {
   -o-background-size: cover;
 }
 
+body p, h1, div{
+
+  color: rgba(87, 80, 80, 0.78);
+}
+
 .main-text h1{
   font-size: 3vh;
 }

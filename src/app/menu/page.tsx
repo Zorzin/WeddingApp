@@ -17,8 +17,8 @@ export default function Menu() {
 
     return (
         <div className="w-full items-center flex flex-col min-h-screen mb-10">
-            <div className="text-left w-full ml-12 mt-6">
-                <div><Image src={"/undo.png"} alt="arrow" height={30} width={30} unoptimized onClick={GoBack}/> </div>
+            <div className="text-left w-full">
+                <div  className="ml-12 mt-6"><Image src={"/undo.png"} alt="arrow" height={30} width={30} unoptimized onClick={GoBack}/> </div>
             </div>
             <div className="menu-body">
                 <div className="menu-content">
