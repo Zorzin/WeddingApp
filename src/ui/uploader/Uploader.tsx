@@ -42,7 +42,7 @@ export default function Uploader() {
                 data.append('imageFile', selectedPhoto)
             })
 
-            const response = await fetch('/photoupload', {
+            const response = await fetch('/cloudinary', {
                 method: 'POST',
                 body: data
             });
