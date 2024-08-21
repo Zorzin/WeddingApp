@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image";
-import {usePathname, useRouter, useSearchParams} from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import "./table.css";
-import { useDebouncedCallback } from 'use-debounce';
+import { useDebouncedCallback } from "use-debounce";
 import TableContent from "@/ui/TableContent/TableContent";
 
 
