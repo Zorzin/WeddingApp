@@ -22,142 +22,127 @@ export default function Plan() {
                     <p className="timeline-header">Rozkład jazdy</p>
                     <p className="timeline-day">Sobota</p>
                     <div className="schedule">
-                        <div className="event">
-                            <div className="left">
-
-                            </div>
-                            <div className="right info">
-                                <span className="dot"/>
-                                <div className="icon">
-                                    <Image src={"/icons/entry-pin.png"} alt="meldunek" unoptimized width={45}
-                                           height={45}/>
-                                </div>
-                                <div className="description">
-                                    <div className="time">14:00</div>
-                                    <span className="text">Meldunek</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="event">
+                        <div className="event-reverse">
                             <div className="left info">
+                                <span className="dot"/>
                                 <div className="description">
                                     <div className="time">17:30</div>
                                     <span className="text">Aperitivo</span>
                                 </div>
                                 <div className="icon">
-                                    <Image src={"/icons/toast.png"} alt="toast" unoptimized width={45} height={45}/>
+                                    <Image src={"/icons/toast.png"} alt="aperitivo" unoptimized width={45}
+                                           height={45}/>
                                 </div>
-                                <span className="dot"/>
                             </div>
                             <div className="right">
 
                             </div>
                         </div>
-                        <div className="event">
-                            <div className="left">
-
-                            </div>
+                        <div className="event-reverse">
+                            <div className="left"/>
                             <div className="right info">
-                                <span className="dot"/>
                                 <div className="icon">
-                                    <Image src={"/icons/ceremony.png"} alt="ceremonia" unoptimized width={45}
+                                    <Image src={"/icons/ceremony.png"} alt="ceremony" unoptimized width={45}
                                            height={45}/>
                                 </div>
                                 <div className="description">
                                     <div className="time">18:00</div>
                                     <span className="text">Ceremonia</span>
                                 </div>
+                                <span className="dot"/>
                             </div>
                         </div>
-                        <div className="event">
+                        <div className="event-reverse">
                             <div className="left info">
+                                <span className="dot"/>
                                 <div className="description">
-                                    <div className="time">18:30</div>
+                                    <div className="time">18:15</div>
                                     <span className="text">Życzenia</span>
                                 </div>
                                 <div className="icon">
-                                    <Image src={"/icons/wedding.png"} alt="wishes" unoptimized width={45} height={45}/>
+                                    <Image src={"/icons/wedding.png"} alt="Życzenia" unoptimized width={45}
+                                           height={45}/>
                                 </div>
-                                <span className="dot"/>
                             </div>
-                            <div className="right">
-
-                            </div>
+                            <div className="right"/>
                         </div>
-                        <div className="event">
+                        <div className="event-reverse">
                             <div className="left">
 
                             </div>
                             <div className="right info">
-                                <span className="dot"/>
                                 <div className="icon">
-                                    <Image src={"/icons/wine.png"} alt="wine" unoptimized width={45} height={45}/>
+                                    <Image src={"/icons/soup.png"} alt="Na pierwsze rosołek" unoptimized width={45}
+                                           height={45}/>
                                 </div>
                                 <div className="description">
-                                    <div className="time">18:40</div>
-                                    <span className="text">Przywitanie</span>
+                                    <div className="time">18:30</div>
+                                    <span className="text">Na pierwsze rosołek</span>
                                 </div>
+                                <span className="dot"/>
                             </div>
                         </div>
-                        <div className="event">
+                        <div className="event-reverse">
                             <div className="left info">
+                                <span className="dot"/>
                                 <div className="description">
-                                    <div className="time">18:45</div>
-                                    <span className="text">Przyjęcie</span>
+                                    <div className="time">19:00</div>
+                                    <span className="text">Hulanki i swawole</span>
                                 </div>
                                 <div className="icon">
-                                    <Image src={"/icons/party.png"} alt="party" unoptimized width={45} height={45}/>
+                                    <Image src={"/icons/party.png"} alt="Hulanki i swawole" unoptimized width={45}
+                                           height={45}/>
                                 </div>
-                                <span className="dot"/>
                             </div>
                             <div className="right">
 
                             </div>
                         </div>
-                        <div className="event">
+                        <div className="event-reverse">
                             <div className="left">
 
                             </div>
                             <div className="right info">
-                                <span className="dot"/>
                                 <div className="icon">
-                                    <Image src={"/icons/cake.png"} alt="tort" unoptimized width={45} height={45}/>
+                                    <Image src={"/icons/cake.png"} alt="Tort" unoptimized width={45} height={45}/>
                                 </div>
                                 <div className="description">
                                     <div className="time">21:00</div>
                                     <span className="text">Tort</span>
                                 </div>
+                                <span className="dot"/>
                             </div>
                         </div>
-                        <div className="event">
+                        <div className="event-reverse">
                             <div className="left info">
+                                <span className="dot"/>
                                 <div className="description">
-                                    <div className="time">00:30</div>
-                                    <span className="text">Oczepiny!</span>
+                                    <div className="time">00:00</div>
+                                    <span className="text">Oczepiny</span>
                                 </div>
                                 <div className="icon">
-                                    <Image src={"/icons/fashion.png"} alt="fashion" unoptimized width={45} height={45}/>
+                                    <Image src={"/icons/fashion.png"} alt="Oczepiny" unoptimized width={45}
+                                           height={45}/>
                                 </div>
-                                <span className="dot"/>
                             </div>
                             <div className="right">
 
                             </div>
                         </div>
-                        <div className="event">
+                        <div className="event-reverse">
                             <div className="left">
 
                             </div>
                             <div className="right info">
-                                <span className="dot"/>
                                 <div className="icon">
-                                    <Image src={"/icons/landscape.png"} alt="landscape" unoptimized width={45}
+                                    <Image src={"/icons/landscape.png"} alt="Dobranoc" unoptimized width={45}
                                            height={45}/>
                                 </div>
                                 <div className="description">
-                                    <div className="time">5:00</div>
+                                    <div className="time">05:00</div>
                                     <span className="text">Dobranoc</span>
                                 </div>
+                                <span className="dot"/>
                             </div>
                         </div>
                     </div>
