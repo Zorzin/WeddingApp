@@ -33,7 +33,7 @@ export default function Table() {
     }, 300);
 
     return (
-        <div className="w-full items-center flex flex-col">
+        <div className="w-full items-center flex flex-col h-dvh">
             <div className="text-left w-full">
                 <div className="ml-12 mt-6"><Image src={"/undo.png"} alt="arrow" height={30} width={30} unoptimized
                                                    onClick={GoBack}/></div>
