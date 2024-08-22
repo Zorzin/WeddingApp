@@ -5,6 +5,7 @@ import Image from 'next/image';
 import {Button} from "@/ui/button";
 import "../uploader.css";
 import {ClipLoader} from "react-spinners";
+import * as Bytescale from "@bytescale/sdk";
 
 export default function Uploader() {
     const [selectedPhotos, setSelectedPhotos] = useState<File[]>([]);
@@ -37,29 +38,32 @@ export default function Uploader() {
     const handleUpload = async () => {
         try {
             setLoading(true);
-            const data = new FormData()
-            selectedPhotos.map((selectedPhoto) => {
-                data.append('imageFile', selectedPhoto)
-            })
 
-            const response = await fetch('/cloudinary', {
-                method: 'POST',
-                body: data
+            const uploadManager = new Bytescale.UploadManager({
+                apiKey: "public_W142ikK7b8SHzr5t3gmsymFjq7a2" // This is your API key.
             });
-            console.log(response);
 
-            if (response.ok) {
-                console.log("przez setselectedphotos");
-                setSelectedPhotos([]);
-                console.log("przed alertem")
-                alert('Zdjęcia i filmy zostały wysłane! Dzięki!');
-                console.log("po alercie");
-            }
+            await Promise.all(selectedPhotos.map(async (file) => {
+                setLoading(true);
+                await uploadManager.upload({data: file}).catch((e: any) => {
+                    console.error('Error:', e);
+                    alert('Błąd podczas wysyłania zdjęć i filmów, spróbuj ponownie (ale to nie pomoże, więc odśwież stronę i powinno działać).');
+                    return;
+                })
+                    .then((response: any) => {
+                        console.log(`File uploaded:\n${response.fileUrl}`);
+                    });
+            }));
         } catch (error) {
             alert('Błąd podczas wysyłania zdjęć i filmów, spróbuj ponownie (ale to nie pomoże, więc odśwież stronę i powinno działać).');
             console.error('Error:', error);
         }
-        setLoading(false);
+        finally
+        {
+            alert('Zdjęcia i filmy zostały wysłane! Dzięki!')
+            setLoading(false);
+            setSelectedPhotos([]);
+        }
     }
 
     return (
