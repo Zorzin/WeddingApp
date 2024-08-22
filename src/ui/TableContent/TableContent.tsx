@@ -19,10 +19,10 @@ export default function TableContent({params} : {params: {value: string}}) {
         "magdalena bakunowicz": "/tables/table-madzia.png",
         "madzia": "/tables/table-madzia.png",
         //Magda T
-        "magda": "/tables/table-magda-t.png",
-        "magda topczewska": "/tables/table-magda-t.png",
-        "magdalena topczewska": "/tables/table-magda-t.png",
-        "topczewska": "/tables/table-magda-t.png",
+        "magda": "/tables/table-magda.png",
+        "magda topczewska": "/tables/table-magda.png",
+        "magdalena topczewska": "/tables/table-magda.png",
+        "topczewska": "/tables/table-magda.png",
         //Psor
         "psor": "/tables/table-psor.png",
         "michał ostapowicz": "/tables/table-psor.png",
@@ -100,6 +100,7 @@ export default function TableContent({params} : {params: {value: string}}) {
         "korzynska": "/tables/table-ola-k.png",
         "ola korzynska": "/tables/table-ola-k.png",
         "aleksandra korzynska": "/tables/table-ola-k.png",
+        "olcia": "/tables/table-ola-k.png",
         //Doma
         "doma": "/tables/table-doma.png",
         "dominika": "/tables/table-doma.png",

@@ -5,6 +5,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import "./table.css";
 import { useDebouncedCallback } from "use-debounce";
 import TableContent from "@/ui/TableContent/TableContent";
+import {Suspense} from "react";
 
 
 export default function Table() {
@@ -40,15 +41,17 @@ export default function Table() {
             <div className="tableBody">
                 <div className="tableContent pl-6 pr-6">
                     <h1 className="mt-4 mb-2">Podaj swoje imię i nazwisko:</h1>
-                    <input
-                        className="mr-6 peer text-center block w-full rounded-md border border-gray-200 py-[9px] pl-2 pr-2 text-sm outline-2 placeholder:text-gray-500"
-                        placeholder="Imię i nazwisko"
-                        onChange={(e) => {
-                            handleSearch(e.target.value);
-                        }}
-                        defaultValue={searchParams.get('query')?.toString()}/>
+                    <Suspense>
+                        <input
+                            className="mr-6 peer text-center block w-full rounded-md border border-gray-200 py-[9px] pl-2 pr-2 text-sm outline-2 placeholder:text-gray-500"
+                            placeholder="Imię i nazwisko"
+                            onChange={(e) => {
+                                handleSearch(e.target.value);
+                            }}
+                            defaultValue={searchParams.get('query')?.toString()}/>
+                    </Suspense>
 
-                    {query && <TableContent params={{value: query}} />}
+                    {query && <TableContent params={{value: query}}/>}
                 </div>
             </div>
         </div>
