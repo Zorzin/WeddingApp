@@ -27,7 +27,7 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
                     return resolve(uploadResult);
                 }).end(buffer);
             });
-            console.log(uploadResult);
+            console.log("Upload result:",uploadResult);
         }
         catch (error) {
             console.error('Error while uploading photo:', error);

@@ -48,7 +48,7 @@ export default function Table() {
                             onChange={(e) => {
                                 handleSearch(e.target.value);
                             }}
-                            defaultValue={searchParams.get('query')?.toString()}/>
+                            defaultValue={query ?? ""}/>
                     </Suspense>
 
                     {query && <TableContent params={{value: query}}/>}
