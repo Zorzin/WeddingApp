@@ -103,6 +103,7 @@ export default function TableContent({params} : {params: {value: string}}) {
         "olcia": "/tables/table-ola-k.png",
         //Doma
         "doma": "/tables/table-doma.png",
+        "domka": "/tables/table-doma.png",
         "dominika": "/tables/table-doma.png",
         "dominika wojtkowska": "/tables/table-doma.png",
         "wojtkowska": "/tables/table-doma.png",
@@ -115,6 +116,8 @@ export default function TableContent({params} : {params: {value: string}}) {
         "dominika wojtkowska-wlodarczyk": "/tables/table-doma.png",
         //Lukaszek
         "łukaszek": "/tables/table-lukaszek.png",
+        "lukamszek": "/tables/table-lukaszek.png",
+        "łukamszek": "/tables/table-lukaszek.png",
         "łukasz": "/tables/table-lukaszek.png",
         "łukasz włodarczyk": "/tables/table-lukaszek.png",
         "lukasz": "/tables/table-lukaszek.png",
