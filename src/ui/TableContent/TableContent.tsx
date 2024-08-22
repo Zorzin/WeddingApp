@@ -161,6 +161,7 @@ export default function TableContent({params} : {params: {value: string}}) {
         "arturek ejsmont": "/tables/table-arturek.png",
         //Krzys
         "krzyś": "/tables/table-krzys.png",
+        "krzys": "/tables/table-krzys.png",
         "krzysiek": "/tables/table-krzys.png",
         "krzysztof": "/tables/table-krzys.png",
         "waczyński": "/tables/table-krzys.png",
