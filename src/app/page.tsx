@@ -10,31 +10,27 @@ export default async function Home() {
         <div className="max-w-90p main-page">
             <div className="main-content">
                 <div className="w-full center-div main-text">
-                    <h1 className="pt-10">To nie są ćwiczenia!</h1>
+                    <p className="pt-10 text-2xl">Było wybornie! Dziękujemy!</p>
                 </div>
 
                 <div className="relative aspect-square main-logo">
                     <Image
                         className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                        src="/logo.jpeg"
+                        src="/logo-new.jpg"
                         alt="App Logo"
-                        layout="fill"
+                        width={500}
+                        height={8900}
                         priority
                     />
                 </div>
 
-                <div className="w-full center-div main-description">
-                    <h1>Wyślij nam zdjęcia i filmy, a my zrobimy z tym coś fajnego!</h1>
-                </div>
-                <div className="w-full">
-                    <Uploader/>
-                    {/*<LastUploadedImages/>*/}
-                </div>
+                <div className="w-full center-div flex items-center justify-center pb-8">
 
-                <div className="w-full center-div main-description-plan">
-                    <h1>Zobacz co dla Was przygotowaliśmy!</h1>
+                    <iframe width="270" height="480" src="https://www.youtube.com/embed/dtiSbwEBj7Y?si=z41sRsQOZmJbqWFY"
+                            title="YouTube video player" frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 </div>
-                <Informer/>
             </div>
         </div>
     </main>
