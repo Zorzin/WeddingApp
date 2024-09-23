@@ -83,7 +83,7 @@ export default function Album() {
                         {loggedIn &&
                             <>
                                 <div
-                                    className="grid grid-cols-2 gap-x-5 gap-y-5 p-5 grid-container aspect-square mt-20">
+                                    className="grid grid-cols-2 gap-x-5 gap-y-5 p-5 grid-container mt-20">
                                     <div
                                         className="w-full h-full min-h-32 flex justify-center items-center align-bottom overflow-hidden aspect-square">
                                         <Image src="/album/analog.jpg" alt="analog"
