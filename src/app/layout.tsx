@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Petit_Formal_Script } from "next/font/google";
 import "./globals.css";
+import { CookiesProvider } from 'next-client-cookies/server';
 
 const petitFormalScript = Petit_Formal_Script({ subsets: ["latin"], weight: ["400"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={petitFormalScript.className}>
-        {children}
+      <CookiesProvider>{children}</CookiesProvider>;
       </body>
     </html>
   );
