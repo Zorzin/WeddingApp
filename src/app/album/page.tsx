@@ -14,8 +14,9 @@ export default function Album() {
     const [loading, setLoading] = useState(false);
     const [loggedIn, setLoggedIn] = useState(false);
 
-    const handleSubmit = () => {
-        const onSubmit = async () => {
+    const handleSubmit = (e: React.FormEvent | null) => {
+        const onSubmit = async (e: React.FormEvent | null) => {
+            if (e) e.preventDefault();
             setLoading(true);
             const request = await fetch(`/api`, {
                 body: JSON.stringify({password}),
@@ -35,12 +36,12 @@ export default function Album() {
                 cookies.set("password", password, {expires: d});
             }
         };
-        onSubmit();
+        onSubmit(e);
     };
 
     useEffect(() => {
         if (password) {
-            handleSubmit();
+            handleSubmit(null);
         }
     }, []);
 
