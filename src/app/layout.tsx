@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={petitFormalScript.className}>
-      <CookiesProvider>{children}</CookiesProvider>;
+        <CookiesProvider>{children}</CookiesProvider>;
       </body>
     </html>
   );

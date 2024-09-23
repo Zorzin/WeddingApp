@@ -2,22 +2,20 @@
 
 import React, {useEffect, useState} from "react";
 import Image from "next/image";
-import {router} from "next/client";
 import {useRouter} from "next/navigation";
+import { useCookies } from 'next-client-cookies';
 import "./album.css";
-import {Button} from "@/ui/button";
 
 export default function Album() {
     const router = useRouter();
-    const [password, setPassword] = useState('');
+    const cookies = useCookies();
+    const [password, setPassword] = useState(cookies.get("password") || "");
     const [passwordIncorrect, setPasswordIncorrect] = useState(false)
     const [loading, setLoading] = useState(false);
     const [loggedIn, setLoggedIn] = useState(false);
 
-
-    const handleSubmit = (e: React.FormEvent) => {
-        const onSubmit = async (e: React.FormEvent) => {
-            e.preventDefault();
+    const handleSubmit = () => {
+        const onSubmit = async () => {
             setLoading(true);
             const request = await fetch(`/api`, {
                 body: JSON.stringify({password}),
@@ -32,10 +30,19 @@ export default function Album() {
                 setLoggedIn(true);
                 setPasswordIncorrect(false);
                 setLoading(false);
+                const d = new Date();
+                d.setTime(d.getTime() + 30 * 60_000)
+                cookies.set("password", password, {expires: d});
             }
         };
-        onSubmit(e);
+        onSubmit();
     };
+
+    useEffect(() => {
+        if (password) {
+            handleSubmit();
+        }
+    }, []);
 
     function GoBack() {
         router.push('/');
@@ -76,6 +83,10 @@ export default function Album() {
                                     <input type="password" id="password" value={password}
                                            onChange={(e) => setPassword(e.target.value)}
                                            className="mb-4 border-none text-center"/>
+
+                                    {passwordIncorrect &&
+                                        <div className="text-red-500 mb-4">Niepoprawne hasło</div>
+                                    }
                                     <button type="submit">Wyślij</button>
                                 </div>
                             </form>
