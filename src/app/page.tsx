@@ -1,10 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Uploader from "@/ui/uploader/Uploader";
 import LastUploadedImages from "@/ui/uploader/LastUploadedImages";
 import Informer from "@/ui/informer/Informer";
+import {Button} from "@headlessui/react";
+import {useRouter} from "next/navigation";
 
-export default async function Home() {
-    
+export default function Home() {
+    const router = useRouter();
+
+    const handleAlbumButton = async () => {
+        router.push('/album', { scroll: true });
+    }
+
   return (
     <main className="flex min-h-screen flex-col items-center">
         <div className="max-w-90p main-page">
@@ -30,6 +39,15 @@ export default async function Home() {
                             title="YouTube video player" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </div>
+
+                <div className="w-full center-div flex items-center justify-center pb-8 center">
+
+                    <Button color="info"
+                            onClick={handleAlbumButton}
+                            className="center-button">
+                        Albumy
+                    </Button>
                 </div>
             </div>
         </div>

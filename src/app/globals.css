@@ -82,3 +82,34 @@ body p, h1, div{
   background-color: rgb(244, 234, 224);
   border-radius: 24px;
 }
+
+.center{
+  text-align: center;
+  display: inline-flex;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.center-button{
+  padding: 5px;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  display: inline;
+  background-color: #e47010;
+  color: rgb(244, 234, 224);
+  border: none;
+  border-radius: 4px;
+}
+
+.center-button:hover{
+  background-color: rgba(228, 112, 16, 0.8);
+}
+
+.center-button-right{
+  margin-left: 5px;
+}
+
+.center-button-left{
+  margin-right: 5px;
+}
